@@ -1,12 +1,67 @@
-.app__home{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.app__home-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    flex: auto;
+    justify-content: flex-end;
+    align-items: center;
     text-align: center;
+}
 
-    background: var(--lightGray-color);
+.app__home-landing{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+
+    color: var(--grey-color);
+}
+
+#home > .app__home-content {
+    background-color: aqua;
+
+    position: relative;
+}
+
+#home > .app__home-content > video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.app__home-about{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    color: var(--grey-color);
+}
+
+.app__home-about-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: aqua;
+}
+
+.app__home-gallery{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+
+    color: var(--grey-color);
+}
+
+.app__home-pricing{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;  
+
+    color: var(--grey-color);
 }

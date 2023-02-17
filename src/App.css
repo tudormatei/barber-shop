@@ -1,21 +1,12 @@
 .app {
-  background-color: var(--primary-color);
+  background-color: var(--dark-grey-color);
   font-family: var(--font-base);
 }
 
 .bold-text {
   font-size: 1rem;
-  font-weight: 800;
-  color: var(--black-color);
-  text-align: center;
-}
-
-.app__whitebg {
-  background-color: var(--white-color);
-}
-
-.app__primarybg {
-  background-color: var(--primary-color);
+  font-weight: 600;
+  color: var(--secondary-color);
 }
 
 .app__container {

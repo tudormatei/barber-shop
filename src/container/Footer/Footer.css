@@ -1,5 +1,5 @@
 .app__footer {
-    height: 15vh;
+    height: 10vh;
     width: 100%;
   
     overflow: hidden;
@@ -9,24 +9,7 @@
     align-content: center;
     text-align: center;
 
-    background: var(--lightGray-color);
+    background: var(--primary-color);
     user-select: none;
-}
-
-.app__footer .copyright {
-    color: var(--secondary-color);
-    pointer-events: none;
-    padding-top: .5rem;
-}
-
-.app__footer .links > a {
-    /* background-color: var(--secondary-color); */
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
-}
-
-.app__footer .links > a:hover {
-    background-color: var(--gray-color);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--grey-color);
 }

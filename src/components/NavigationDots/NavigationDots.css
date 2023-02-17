@@ -1,0 +1,31 @@
+.app__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    padding: 1rem;
+
+    position: absolute;
+}
+
+.app__navigation > .app__navigation-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--grey-color);
+    margin: 0.5rem;
+
+    transition: background-color 0.2s ease-in-out;
+}
+
+.app__navigation > .app__navigation-dot:hover {
+    background-color: var(--secondary-color);
+}
+
+@media screen and (min-width: 2000px) {
+    .app__navigation > .app__navigation-dot{
+        width: 20px;
+        height: 20px;
+    }
+}

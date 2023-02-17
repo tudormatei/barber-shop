@@ -1,16 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 
+/* 
+  Fonts Lib
+
+  Oswald https://fonts.google.com/specimen/Oswald
+  Bitter https://fonts.google.com/specimen/Bitter
+  Lora https://fonts.google.com/specimen/Lora
+  Play Fair https://fonts.google.com/specimen/Playfair+Display
+*/
 :root {
-  --font-base: "DM Sans", sans-serif;
-
-  --primary-color: #edf2f8;
+  --font-base: "Oswald", sans-serif;
   
-  --secondary-color: #1d74ba;
-  --black-color: #030303;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
-  --brown-color: #46364a;
-  --white-color: #ffffff;
+  --primary-color: #000000;
+  --dark-grey-color: #1d1d1d;
+  --secondary-color: #ddb361;
+  --third-color: #d8a94c;
+  --forth-color: #c6922b;
+
+  --white-color: white;
+  --grey-color:  #C0C0C0;
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  background-clip: content-box;
 }
 
 * {
