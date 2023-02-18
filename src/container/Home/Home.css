@@ -125,8 +125,8 @@
     margin-left: 5rem;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    text-align: start;
+    align-items: center;
+    text-align: center;
     overflow: hidden;
 }
 
@@ -135,9 +135,9 @@
 }
 
 #image-track > .image {
-    flex: 0 0 50vmin;
+    flex: 0 0 56vmin;
     height: 40vmin;
-    width: 50vmin;
+    width: 56vmin;
     object-fit: cover;
     object-position: 50% 50%;
     overflow: hidden;
@@ -147,26 +147,89 @@
 
     box-shadow: 0 0 5px 2px var(--grey-color);
 
-
     transition: object-position 0.1s ease;
 }
 
 #image-track {
     padding: 1rem;
-    flex-wrap: nowrap;
-    overflow: hidden;
+    flex-wrap: wrap;
     display: flex;
     gap: 2.5rem;
     user-select: none;
-    transform: translate(0%, 0%);
+    justify-content: center;
+    
     transition: transform 0.1s ease;
 }
 
-.app__home-pricing{
+#gallery > .app__home-content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.app__home-offers{
     width: 100%;
     min-height: 100vh;
-    display: flex;  
+    display: flex;
+    
+    background-image: url('../../assets/offers-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
 
+
+.app__home-about-content {
+    background-color: rgba(0, 0, 0, .2);
+    padding-left: 5rem;
+    align-items: start;
+    flex-direction: column;
+    text-align: end;
+}
+
+.offer-text {
+    align-items: center;
+    max-width: 50%;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .offer-text {
+        max-width: 75%;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .offer-text {
+        max-width: 75%;
+        font-size: 12px;
+    }
+}
+
+.offer-div {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.offer-item {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     color: var(--grey-color);
-    background-color: aqua;
+    justify-content: flex-start;
+}
+
+.offer-item > div {
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+}
+
+.offer-item > img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
 }

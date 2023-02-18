@@ -6,41 +6,6 @@ import { images } from '../../constants';
 import './Home.css';
 
 const Home = () => {
-  const [traslateX, setTranslateX] = useState(0);
-  const [dragging, setDragging] = useState(false);
-  const [startPos, setStartPos] = useState(0);
-  const [objectPercentage, setObjectPercentage] = useState(50);
-  const [lastPercentage, setLastPercentage] = useState(0);
-  const [nextPercentage, setNextPercentage] = useState(0);
-  const maxDelta = window.innerWidth / 2;
-
-  const handleMouseDown = (e) => {
-    setStartPos(e.clientX);
-    setLastPercentage(nextPercentage);
-    setDragging(true);
-  };
-
-  const handleMouseMove = (e) => {
-    if(!dragging) {return;}
-
-    const position = startPos - e.clientX;
-    let percentage = parseInt((position / maxDelta) * 100);
-    percentage = percentage + lastPercentage;
-
-    const max = 35;
-
-    setObjectPercentage(Math.min(Math.max(percentage, 0), max) + 50);
-    percentage = Math.min(Math.max(percentage, 0), max);
-    setNextPercentage(percentage);
-
-    setTranslateX(percentage);
-  };
-
-  const handleMouseUp = (e) => {
-    setLastPercentage(nextPercentage);
-    setDragging(false);
-  };
-
   return (
     <div className="app">
       <div className='app__home'>
@@ -84,33 +49,62 @@ const Home = () => {
           </div>
         </div>
         <div className='app__home-gallery' id='gallery'>
-          <div className='app__home-content' onTouchStart={handleMouseDown} onTouchEnd={handleMouseUp} onTouchMove={handleMouseMove} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}>
+          <div className='app__home-content'>
             <div className='app__home-gallery-content'>
-            <motion.div
-              whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1]}}
-              transition={{ duration: 0.5 }}
-            >
-              <h1 className='gallery-title'>Preview</h1>
-              <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-            </motion.div>
-              
-              <div id='image-track' style={{ transform: `translateX(-${traslateX}%)` }}>
-                <img className='image' style={{ objectPosition: `${objectPercentage}% 50%` }} src={images.img1} draggable='false'/>
-                <img className='image' style={{ objectPosition: `${objectPercentage}% 50%` }} src={images.img2} draggable='false'/>
-                <img className='image' style={{ objectPosition: `${objectPercentage}% 50%` }} src={images.img3} draggable='false'/>
-                <img className='image' style={{ objectPosition: `${objectPercentage}% 50%` }} src={images.img4} draggable='false'/>
-                <img className='image' style={{ objectPosition: `${objectPercentage}% 50%` }} src={images.img5} draggable='false'/>
+              <div>
+                <h1 className='bold-text'>Preview</h1>
+                <p className='mb-4'>Lorem ipsum dolor sit amet,  consectetur adipiscing elit</p>
               </div>
+              <motion.div
+              whileInView={{ x: [100, 50, 0], opacity: [0, 0, 1]}}
+              transition={{ duration: 0.5 }}
+              id='image-track'
+            >
+              <img className='image' src={images.img1} draggable='false'/>
+                <img className='image' src={images.img2} draggable='false'/>
+                <img className='image' src={images.img3} draggable='false'/>
+                <img className='image' src={images.img4} draggable='false'/>
+                <img className='image' src={images.img5} draggable='false'/>
+            </motion.div>            
             </div>
             <NavigationDots active={'gallery'}/>
           </div>
         </div>
-        <div className='app__home-pricing' id='pricing'>
+        <div className='app__home-offers' id='offers'>
           <div className='app__home-content'>
             <div className='app__home-about-content'>
-              Pricing
+              <div className='offer-text'>
+                    <motion.div
+                  whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1]}}
+                  transition={{ duration: 0.5 }}
+                  className='offer-div'
+                >
+                  <h1 className='bold-text mb-5'>What we offer</h1>
+                  <div className='offer-item'>
+                    <img src={images.scrissor}></img>
+                    <div>
+                      <h4>Lorem ipsum</h4>
+                      <p>Lorem ipsum dolor sit amet,  consectetur adipiscing eliLorem ipsum dolor sit amet,  consectetur adipiscing eliLorem ipsum dolor sit amet,  consectetur adipiscing eli</p>
+                    </div>
+                  </div>
+                  <div className='offer-item'>
+                    <img src={images.paintBucket}></img>
+                    <div>
+                      <h4>Lorem ipsum</h4>
+                      <p>Lorem ipsum dolor sit amet,  consectetur adipiscing eliLorem ipsum dolor sit amet,  consectetur adipiscing eliLorem ipsum dolor sit amet,  consectetur adipiscing eli</p>
+                    </div>
+                  </div>
+                  <div className='offer-item'>
+                    <img src={images.beard}></img>
+                    <div>
+                      <h4>Lorem ipsum</h4>
+                      <p>Lorem ipsum dolor sit amet,  consectetur adipiscing eliLorem ipsum dolor sit amet,  consectetur adipiscing eliLorem ipsum dolor sit amet,  consectetur adipiscing eli</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             </div>
-            <NavigationDots active={'pricing'}/>
+            <NavigationDots active={'offers'}/>
           </div>
         </div>
       </div>

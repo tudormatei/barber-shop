@@ -10,6 +10,10 @@ import img7 from '../assets/image7.jpg';
 import img8 from '../assets/image8.jpg';
 import img9 from '../assets/image9.jpeg';
 import img10 from '../assets/image10.jpg';
+import offersBackground from '../assets/offers-background.jpg';
+import scrissor from '../assets/scissors.png';
+import paintBucket from '../assets/paint-bucket.png';
+import beard from '../assets/beard.png';
 
 export default {
   logo,
@@ -24,4 +28,8 @@ export default {
   img8,
   img9,
   img10,
+  offersBackground,
+  scrissor,
+  paintBucket,
+  beard,
 };
