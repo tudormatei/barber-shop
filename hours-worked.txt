@@ -2,3 +2,5 @@
 20min - more setup
 3 hour - color pallete work + design + navbar finish + template icons (logo, html-logo)
 1 30 hour - flex layout home / landing
+45 min - About home section done
+2 hour - photo presentation
